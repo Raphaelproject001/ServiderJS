@@ -1,64 +1,15 @@
-+<img	src="img/logo.svg" alt="hamburguertoggle">
+// server.mjs
+import { createServer } from 'node:http';
 
-	+
+const server = createServer((req, res) => {
+res.writeHead(200, { 'Content-Type': 'text/plain' });
+res.end('Hello World!\n');
+});
 
-	+<h1>	Sobre	a	empresa	</h1>
-	+
-	+<p>
-	+		A	hamburguertoggle	é	uma	  das   maiores   empresas	de	lanches	 em	  todo	o	Brasil.
-	+		Edificada	em	2003,	possui	filiais  em	24	estados  do Brasil,	sendo	líder	de	mercado	com	mais	de	4/5	de
-	+		integridade	  em	21.
-	+</p>
-	+
-	+<p>
-	+		Nossa	Cede	está  localizada	em	Ceará,	na	Capital	  Fortaleza.	Da	Cede,	é  distribuido	30%	  das	mercadorias.	Nossa	cede:
-	+</p>
-	+
-	+<figure>
-	+		<img	src="img/cede-hamburguertoggle.png" alt="Cede	da	hamburguertoggle">
-	+		<figcaption>
-	+						Cede	Hamburguertoggle	
-	+		</figcaption>
-	+</figure>
-	+
-	+<p>
-	+		Solicite	seus	pedidos	 na	 Hambúrguertoggle.	Acesse	nosso	site	ou	entre	em	contato
-	+		conosco.	Conheça	 nosso	 histórico	o  desenvolvimento da empresa.
-	+</p>
-	+
-	+<h2>	Histórico	</h2>
-	+
-	+<figure>
-	+		<img	src="img/equipe-funcionarios.jpg" alt="Foto	da	equipe	de funcionários">
-	+		<figcaption>Equipe de funcionários</figcaption>
-	+</figure>
-	+
-	+<p>
-	+		A	edificação	em	2003  houve de acontecer em um	tempo que a Tecnologia	já está em avanço para o desenvolvimento econônico das empresas com atendimento digitalmente online	na cidade de Fortaleza e no mundo todo.	A
-	+		equipe de funcionários,	são pessoas de familias tradicionais	da	região,	a famiília Barboza investiu	todas	as	suas	economias	nessa	nova	iniciativa
-,
-	+		progressional	para	aquela	época.	O	fundador	Raphaela Barboza da Silva,	meramente com uma visão pessoal
-	+		gerenciável,	rumou	as	negociações	da	empresa	duradouramente 21 anos,	algum	deles	ao	lado
-	+		de	sua família Barboza, na	atual CEDE.	O	nome	da	empresa	é	inspirado	no	nome	da	família.
-	+</p>
-	+
-	+<p>
-	+		O	crescimento	da	empresa	foi	praticamente	instantâneo.	Nos	primeiros	5	anos,	já	atendia	3 estados.
-	+		Bateu	a	marca	de	14 estados	em	apenas	15	anos	de	existência.	Até	hoje,	já	atendeu	3  milhões
-	+		de	pessoas,	em	milhões	de solicitações de entregas.
-	+</p>
-	+
-	+<p>
-	+		O	crescimento	em	número	de	funcionários é extraordinariamente impressionante.	Hoje, é uma das maiores contratantes do
-	+		Brasil,	mas	após 4	anos de	atuação eminente, já possuía	3 mil	funcionários.	nas regiões sudeste,sul,centro-oeste e norte d
-o
-	+		Brasil,	havendo	19	mil	funcionários só no Ceará, apesar dos	92 mil	nas outas regiões do país 	e
-	+		na contabilidade do país inteiro.
-	+</p>
-	+
-	+<p>
-    +		Tendo como vista importante as finanças,os recursos humanos e econômicamente sendo benefício	da	empresa	para	o	Brasil, a família Barboza tem conseguido várias vitórias
-,
+// starts a simple http server locally on port 3000
+server.listen(3000, '127.0.0.1', () => {
+console.log('Listening on 127.0.0.1:3000');
+});
 
-	+		parabenizações e honras. Algumas autoridades do Brasil ja visitaram a cede da empresa, entre elas governadores da regiao sudeste,sul,centro-oeste e norte do Brasil.
-	+</p>
+// run with `node server.mjs`
+
