@@ -205,6 +205,53 @@ data = {
         "Natural Language Processing (NLP) with NLTK is a powerful tool.",
         "Machine Learning and Data Science are fascinating fields."
     ]
+pip install tensorflow
+
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense, Embedding
+
+# Dados fictícios para exemplo
+def generate_data(seq_length, num_samples):
+    X = np.random.random((num_samples, seq_length, 1))
+    y = np.random.randint(2, size=(num_samples, 1))
+    return X, y
+
+# Gerar dados
+seq_length = 10
+num_samples = 1000
+X, y = generate_data(seq_length, num_samples)
+
+# Definir o modelo
+model = Sequential([
+    LSTM(50, activation='relu', input_shape=(seq_length, 1)),
+    Dense(1, activation='sigmoid')
+])
+
+# Compilar o modelo
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Treinar o modelo
+model.fit(X, y, epochs=10, batch_size=32)
+
+# Avaliar o modelo
+loss, accuracy = model.evaluate(X, y)
+print(f'Loss: {loss}, Accuracy: {accuracy}')
+
+pip install transformers torch
+
+from transformers import pipeline
+
+# Crie um pipeline de classificação de texto
+classifier = pipeline('sentiment-analysis')
+
+# Classifique um texto
+text = "Eu amo aprender sobre redes neurais!"
+result = classifier(text)
+
+print(result)
+
 }
 
 # Carregar dados em um DataFrame
